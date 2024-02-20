@@ -1,0 +1,117 @@
+@import '../Mixins.scss';
+
+#masthead {
+  background: #ffcc2f;
+  color: #543729;
+  padding: 10px 0;
+  min-height: 180px;
+  margin-bottom: 20px;
+  @include mobile-view {
+    margin-bottom: 10px;
+    min-height: auto;
+  }
+}
+.container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+  .nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .network-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 16px;
+    @include mobile-view {
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f1c03e;
+      display: table;
+      font-size: 14px;
+      left: auto;
+      position: relative;
+      top: auto;
+      width: 100%;
+    }
+    li {
+      float: left;
+      @include mobile-view {
+        float: none;
+        text-align: center;
+        display: table-cell;
+        margin-bottom: 10px;
+      }
+      &:first-child a{
+        color: #00acee;
+      }
+    }
+    a {
+      color: #2baf2b;
+      display: block;
+      padding: 0.2em 15px;
+      border-radius: 4px;
+      &:hover {
+        text-decoration: none;
+        background: white;
+      }
+    }
+  }
+  img.logo {
+    display: block;
+    width: 140px;
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include mobile-view {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      left: auto;
+      top: 5px;
+    }
+  }
+  .page-title {
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 220px;
+    @include mobile-view {
+      font-size: 32px;
+      padding: 7px 0 5px 0;
+      display: inline-block;
+    }
+  }
+  h4 {
+    font-size: 1.2em;
+    margin: -20px 0 0 223px;
+    @include mobile-view {
+      display: none;
+    }
+  }
+}
+.notification {
+  width: 100%;
+  text-align: center;
+  background-color: #2188b6;
+  color: white;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  padding: 4px;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}

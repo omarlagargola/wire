@@ -1,0 +1,53 @@
+@import '../Mixins.scss';
+
+.main {
+  margin-left: 230px;
+  padding-bottom: 40px;
+  @include mobile-view {
+    margin-left: 0;
+  }
+  .form-control {
+    height: 100%;
+    border: 0;
+    box-shadow: 0 0 1px #ccc;
+    font-size: 18px;
+    padding: 12px 10px;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 10px;
+    outline-width: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  .container {
+    position: relative;
+    table.search-results {
+      table-layout: fixed;
+      th {
+        border-bottom: 1px solid #eee;
+        padding: 5px 0 15px 0;
+        text-align: left;
+        min-width: 80px;
+        a {
+          cursor: pointer;
+        }
+      }
+      tr {
+        &.row-hidden {
+          display: none;
+        }
+        td {
+          vertical-align: middle;
+          border-top: 1px solid #f2f2f2;
+          padding-right: 5px;
+          img {
+            width: 5rem;
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+}

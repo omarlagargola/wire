@@ -1,0 +1,71 @@
+@import '../Mixins.scss';
+.menu-btn {
+  display: none;
+  @include mobile-view {
+    display: block;
+    background-color: white;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-align: center;
+    height: 45px;
+    padding: 0px 20px;
+    margin: 20px auto;
+  }
+}
+.sidebar{
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 200px;
+  @include mobile-view {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 100%;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+  }
+  &.extended {
+    height: auto;
+  }
+  .nav {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    li {
+      font-size: 17px;
+      font-weight: bold;
+      @include mobile-view {
+        border-bottom: 1px solid #eee;
+        padding: 5px 0;
+      }
+      a {
+        display: block;
+        padding: 0.2em 0;
+        color: #00acee;
+        @include mobile-view {
+          padding: 0.4em 0;
+        }
+      }
+    }
+  }
+  h5 {
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+  .sidebar-logo {
+    max-height: 100px;
+    max-width: 200px;
+    display: block;
+    margin: 5px auto;
+  }
+  .extra-nav li {
+    font-size: 14px;
+    a {
+      display: block;
+      padding: 0.2em 0;
+    }
+  }
+}
